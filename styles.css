@@ -41,3 +41,9 @@ dialog{padding:0;color:var(--ink);border:0;background:#f8f9f2;max-width:calc(100
 .hero-controls .icon-button{width:38px;height:38px;background:#173b3029;backdrop-filter:blur(8px);color:white}
 .hero-controls .icon-button:hover{background:#173b3059}
 @media(max-width:800px){.hero-controls{bottom:22px}.hero-controls .icon-button{width:36px;height:36px}}
+
+/* Hero-only preview: retain later sections in the source for the next stage. */
+html[data-preview="hero"],html[data-preview="hero"] body{height:100%;overflow:hidden;overscroll-behavior:none}
+html[data-preview="hero"] .hero{height:100svh;min-height:0;max-height:none}
+html[data-preview="hero"] main>.section:not(#home),html[data-preview="hero"] .site-footer,html[data-preview="hero"] .reading-progress,html[data-preview="hero"] .back-to-top,html[data-preview="hero"] #site-menu>a[href^="mailto:"]{display:none}
+html[data-preview="hero"] .desktop-nav a:not([href="#home"]),html[data-preview="hero"] #site-menu nav a:not([href="#home"]){opacity:.45;cursor:default;pointer-events:none}

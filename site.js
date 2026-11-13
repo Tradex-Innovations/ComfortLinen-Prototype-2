@@ -2,6 +2,17 @@ import {media} from './media.js';
 
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+const heroPreview = document.documentElement.dataset.preview === 'hero';
+if (heroPreview) {
+  $$('.desktop-nav a, #site-menu nav a').filter(link => link.getAttribute('href') !== '#home').forEach(link => {
+    link.setAttribute('aria-disabled', 'true');
+    link.tabIndex = -1;
+    link.addEventListener('click', event => {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }, {capture: true});
+  });
+}
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const hero = $('#home');
 const heroVideo = $('#hero-video');
