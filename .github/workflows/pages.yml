@@ -1,0 +1,54 @@
+name: Publish ComfortLinen Prototype 2
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Validate source and media
+        run: npm run check
+      - name: Verify original video quality is preserved
+        run: |
+          python3 - <<'PY'
+          from hashlib import sha256
+          from pathlib import Path
+          expected = '4751d5f4cc0f63f6687a8e9837d716c7f51e49a57f60f801b889e17c6fd9943f'
+          assert sha256(Path('assets/comfort-by-nature.mp4').read_bytes()).hexdigest() == expected
+          PY
+      - name: Build website
+        run: npm run build
+      - name: Disable Jekyll processing
+        run: touch dist/.nojekyll
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
