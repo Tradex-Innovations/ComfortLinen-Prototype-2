@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#183d32">
+  <meta name="description" content="Linen hire and commercial laundry for hotels, restaurants and holiday stays across the South West. Exceptional linen. Thoughtful care.">
+  <meta property="og:title" content="ComfortLinen | Comfort by Nature">
+  <meta property="og:description" content="Exceptional linen. Thoughtful care. Discover a more considered approach to linen hire and laundry.">
+  <meta property="og:image" content="https://tradex-innovations.github.io/ComfortLinen-Prototype-2/assets/hero-poster.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tradex-innovations.github.io/ComfortLinen-Prototype-2">
+  <title>ComfortLinen | Comfort by Nature</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/font-0.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/hero-poster.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <svg class="svg-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><defs>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M4 12h15m-6-6 6 6-6 6"/></symbol>
+    <symbol id="diagonal" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></symbol>
+    <symbol id="pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+    <symbol id="leaf" viewBox="0 0 40 40"><path d="M9 30C-1 12 22 7 33 5c1 13-1 32-19 27M7 35 27 13"/></symbol>
+  </defs></svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="header">
+    <a class="brand" href="#home" aria-label="ComfortLinen home"><img src="assets/comfortlinen-green.png" alt="ComfortLinen LTD" width="2172" height="724"></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#home" class="active" aria-current="location">Home</a><a href="#about">About us</a><a href="#services">Our services</a><a href="#sustainability">Sustainability</a><a href="#story">Our story</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-toggle" aria-label="Open menu" aria-controls="site-menu" aria-expanded="false"><span>Menu</span><i></i><i></i></button>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home" aria-labelledby="hero-title" data-section="01">
+      <div class="hero-media"><video id="hero-video" autoplay muted playsinline loop preload="metadata" poster="assets/hero-poster.jpg" aria-label="Comfort by Nature film: linen, hospitality and natural landscapes"><source src="assets/comfort-by-nature.mp4" type="video/mp4"></video></div>
+      <h1 class="hero-title" id="hero-title"><span>Comfort,</span><span>by nature.</span></h1>
+      <div class="hero-controls">
+        <button id="hero-playback" class="icon-button" aria-label="Pause background film"><svg><use href="#pause"/></svg></button>
+        <button class="icon-button" data-open-film aria-label="Watch full film"><svg><use href="#diagonal"/></svg></button>
+      </div>
+    </section>
+
+    <section class="about section section-padding" id="about" aria-labelledby="about-title" data-section="02">
+      <div class="section-heading" data-reveal><span class="section-no">01 / WHO WE ARE</span><span class="eyebrow muted">CARE IN EVERY FIBRE</span></div>
+      <div class="about-grid">
+        <h2 id="about-title" data-reveal>Beautiful linen.<br>Better beginnings.</h2>
+        <div class="about-copy" data-reveal><p class="lead">There’s a feeling that comes with fresh linen. We believe the care behind it should feel just as good.</p><p>We’re ComfortLinen. From our home in Axminster, we provide linen hire and commercial laundry for hotels, restaurants and holiday stays across the South West. Careful finishing, dependable service and a thoughtful use of resources. It’s the way we work.</p><a class="text-link" href="#story"><span class="arrow-tile"><svg><use href="#arrow"/></svg></span>Discover our story</a></div>
+      </div>
+      <div class="capability-row" data-reveal><div><span>01</span><p>Linen hire</p><small>Quality linen, dedicated to you.</small></div><div><span>02</span><p>Commercial laundry</p><small>Freshly cared for. Carefully finished.</small></div><div><span>03</span><p>Collection & delivery</p><small>From our laundry to your door.</small></div></div>
+    </section>
+
+    <section class="services section" id="services" aria-labelledby="services-title" data-section="03">
+      <div class="services-heading section-padding"><div data-reveal><p class="section-no">02 / OUR SERVICES</p><h2 id="services-title">For the moments<br>that <em>matter.</em></h2></div><p class="services-intro" data-reveal>For every guest, every table, every new arrival.<br>Find the right care for your world.</p></div>
+      <div class="service-tabs" role="tablist" aria-label="Choose your linen service">
+        <button id="tab-hotels" class="selected" role="tab" aria-selected="true" aria-controls="service-panel" data-service="0"><small>01</small>Hotels & hospitality<svg><use href="#diagonal"/></svg></button>
+        <button id="tab-dining" role="tab" aria-selected="false" aria-controls="service-panel" tabindex="-1" data-service="1"><small>02</small>Restaurants & dining<svg><use href="#diagonal"/></svg></button>
+        <button id="tab-stays" role="tab" aria-selected="false" aria-controls="service-panel" tabindex="-1" data-service="2"><small>03</small>Holiday stays & B&Bs<svg><use href="#diagonal"/></svg></button>
+        <button id="tab-garments" role="tab" aria-selected="false" aria-controls="service-panel" tabindex="-1" data-service="3"><small>04</small>Garment care<svg><use href="#diagonal"/></svg></button>
+      </div>
+      <div id="service-panel" class="service-panel" role="tabpanel" aria-labelledby="tab-hotels">
+        <div class="service-visual"><img id="service-image" src="assets/hotel-film.jpg" alt="Fresh white bed linen and pillows in a guest room" width="1280" height="720" loading="lazy"><video id="service-video" muted playsinline loop hidden></video><span class="image-caption" id="service-caption">01 / HOTELS & HOSPITALITY</span></div>
+        <div class="service-copy"><div class="service-counter"><span id="service-number">01</span><i></i><span>04</span></div><h3 id="service-headline">A better night.<br>A lasting impression.</h3><p id="service-text">From the first touch of a crisp sheet to a perfectly folded towel, the little details make a stay. We care for your linen so you can care for your guests.</p><ul id="service-details"><li>Bed linen & pillowcases</li><li>Bath towels & robes</li><li>Linen hire & regular collection</li></ul><button class="text-link" id="service-enquire" data-enquire="Hotels & hospitality"><span class="arrow-tile"><svg><use href="#arrow"/></svg></span>Let’s talk linen</button><div class="service-navigation"><button class="round-button" id="previous-service" aria-label="Previous service"><svg><use href="#arrow"/></svg></button><span>EXPLORE OUR SERVICES</span><button class="round-button" id="next-service" aria-label="Next service"><svg><use href="#arrow"/></svg></button></div></div>
+      </div>
+    </section>
+
+    <section class="care section" id="sustainability" aria-labelledby="care-title" data-section="04">
+      <div class="care-visual"><img id="care-image" src="assets/coast-poster.jpg" alt="The quiet shoreline at sunset" width="1280" height="720" loading="lazy"><video id="care-video" muted playsinline loop hidden></video><span>OUR WORLD. OUR RESPONSIBILITY.</span></div>
+      <div class="care-content"><p class="section-no" data-reveal>03 / A LIGHTER FOOTPRINT</p><h2 id="care-title" data-reveal>Good for your linen.<br>Thoughtful for<br>our world.</h2><p class="care-intro" data-reveal>A little more care makes a difference.<br>It’s woven into the way we work.</p>
+        <div class="care-accordion">
+          <div class="care-item open"><h3><button id="care-water-button" aria-expanded="true" aria-controls="care-water" data-care="water"><span>01</span>Every drop matters<svg><use href="#plus"/></svg></button></h3><div id="care-water" class="care-answer" role="region" aria-labelledby="care-water-button"><p>Water has more than one life in our laundry. Recycling water helps us make better use of a precious resource, wash after wash.</p></div></div>
+          <div class="care-item"><h3><button id="care-energy-button" aria-expanded="false" aria-controls="care-energy" data-care="energy"><span>02</span>Energy, considered<svg><use href="#plus"/></svg></button></h3><div id="care-energy" class="care-answer" role="region" aria-labelledby="care-energy-button" hidden><p>Our own electricity generation and heat recovery help us use energy more thoughtfully, bringing care for the environment into everyday operations.</p></div></div>
+          <div class="care-item"><h3><button id="care-linen-button" aria-expanded="false" aria-controls="care-linen" data-care="linen"><span>03</span>Make good things last<svg><use href="#plus"/></svg></button></h3><div id="care-linen" class="care-answer" role="region" aria-labelledby="care-linen-button" hidden><p>Thoughtful laundering and careful finishing keep quality linen in circulation. We care for the details, giving each piece a fresh start.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="story section section-padding" id="story" aria-labelledby="story-title" data-section="05">
+      <div class="section-heading" data-reveal><p class="section-no">04 / OUR STORY</p><span class="eyebrow muted">DIFFERENT SHORES. THE SAME CARE.</span></div>
+      <div class="story-top"><h2 id="story-title" data-reveal>From Galle.<br>With <em>purpose.</em></h2><div data-reveal><p class="lead">A journey shaped by nature.<br>A business built on care.</p><p>Our co-founder, Mr. Gayanath Nanayakkara, began his journey in Galle, Sri Lanka. He brought that connection to nature to a new chapter in the UK, helping build ComfortLinen in Axminster.</p><p>Today, the same outlook guides our work: dependable care for our customers and a more considered use of resources.</p></div></div>
+      <div class="story-pictures"><figure class="story-place" data-reveal><div><img src="assets/story-galle.webp" width="723" height="547" alt="Palm trees on the Sri Lankan coastline near Galle" loading="lazy"><video id="story-video" muted playsinline loop hidden></video></div><figcaption><span>WHERE IT BEGAN</span><p>Galle, Sri Lanka</p></figcaption></figure><figure class="founder-portrait" data-reveal><img src="assets/co-founder.jpg" width="1000" height="1249" alt="Mr. Gayanath Nanayakkara, co-founder of ComfortLinen" loading="lazy"><figcaption><span>THE PEOPLE BEHIND THE CARE</span><p>Mr. Gayanath Nanayakkara</p><small>Co-founder, ComfortLinen</small></figcaption></figure><div class="story-location" data-reveal><svg><use href="#leaf"/></svg><span>OUR HOME TODAY</span><h3>Axminster.<br>The South West.<br>A fresh chapter.</h3><a class="underlined" href="#contact">Get to know us <svg><use href="#diagonal"/></svg></a></div></div>
+    </section>
+
+    <section class="contact section" id="contact" aria-labelledby="contact-title" data-section="06">
+      <div class="contact-top"><p class="section-no" data-reveal>05 / LET’S TALK</p><div class="contact-heading" data-reveal><h2 id="contact-title">A better impression<br>starts <em>here.</em></h2><button class="contact-arrow" aria-label="Enquire about linen care" data-enquire><svg><use href="#diagonal"/></svg></button></div></div>
+      <div class="contact-bottom"><div><p class="eyebrow">YOUR NEXT CHAPTER</p><a class="contact-email" href="mailto:hello@comfortlinen.co.uk">hello@comfortlinen.co.uk <svg><use href="#diagonal"/></svg></a><a class="contact-phone" href="tel:+44129732121">01297 32121</a></div><div><p class="eyebrow">FIND US</p><address>Unit 3 & 4, Whitty Court<br>Waycroft Avenue, Axminster<br>Devon, EX13 5HU</address></div><div><p class="eyebrow">A LITTLE MORE CARE</p><p>Linen hire & laundry<br>for the South West.</p><button class="underlined" data-enquire>Start a conversation <svg><use href="#arrow"/></svg></button></div></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#home" aria-label="ComfortLinen home"><img src="assets/comfortlinen-green.png" alt="ComfortLinen LTD" width="2172" height="724" loading="lazy"></a><p>Comfort, by nature.</p><span>© <span data-year>2026</span> Tradex Innovations. All rights reserved.</span><a href="#home" class="back-top">Back to top <svg><use href="#arrow"/></svg></a></footer>
+  <div class="reading-progress" aria-hidden="true"><i></i></div>
+  <a class="back-to-top" href="#home" aria-label="Back to top"><svg><use href="#arrow"/></svg></a>
+
+  <dialog id="site-menu" class="menu-dialog" aria-labelledby="menu-title"><div class="menu-header"><a class="brand" href="#home"><img src="assets/comfortlinen-green.png" alt="ComfortLinen LTD" width="2172" height="724"></a><button class="close-button" data-close-dialog aria-label="Close menu"><svg><use href="#close"/></svg></button></div><p class="eyebrow" id="menu-title">EXPLORE COMFORTLINEN</p><nav aria-label="Menu"><a href="#home"><small>01</small>Home<svg><use href="#diagonal"/></svg></a><a href="#about"><small>02</small>About us<svg><use href="#diagonal"/></svg></a><a href="#services"><small>03</small>Our services<svg><use href="#diagonal"/></svg></a><a href="#sustainability"><small>04</small>Sustainability<svg><use href="#diagonal"/></svg></a><a href="#story"><small>05</small>Our story<svg><use href="#diagonal"/></svg></a><a href="#contact"><small>06</small>Contact<svg><use href="#diagonal"/></svg></a></nav><a href="mailto:hello@comfortlinen.co.uk">hello@comfortlinen.co.uk</a></dialog>
+  <dialog id="film-dialog" class="film-dialog" aria-labelledby="film-title"><div class="film-dialog-top"><p id="film-title">COMFORT, BY NATURE. <span>THE FULL FILM / 01:07</span></p><button class="close-button" data-close-dialog aria-label="Close film"><svg><use href="#close"/></svg></button></div><video id="full-film" controls playsinline preload="none" poster="assets/hero-poster.jpg"><source src="assets/comfort-by-nature.mp4" type="video/mp4"></video></dialog>
+  <dialog id="enquiry-dialog" class="enquiry-dialog" aria-labelledby="enquiry-title"><button class="close-button" data-close-dialog aria-label="Close enquiry"><svg><use href="#close"/></svg></button><p class="section-no">A FRESH BEGINNING</p><h2 id="enquiry-title">Let’s talk linen.</h2><p>Tell us a little about your business.<br>We’ll help you find the right care.</p><form id="enquiry-form"><div class="form-row"><label>Your name<input name="name" autocomplete="name" required maxlength="100" placeholder="Full name"></label><label>Email address<input type="email" name="email" autocomplete="email" required maxlength="200" placeholder="you@business.co.uk"></label></div><label>Business name<input name="business" autocomplete="organization" required maxlength="160" placeholder="Your hotel, restaurant or business"></label><label>What can we help with?<select name="service"><option>General enquiry</option><option>Hotels & hospitality</option><option>Restaurants & dining</option><option>Holiday stays & B&Bs</option><option>Garment care</option></select></label><label>A little more detail<textarea name="message" rows="3" maxlength="2000" placeholder="Location, linen requirements or anything else you’d like us to know"></textarea></label><p class="form-note">This prototype prepares an email draft for you to review and send.</p><button class="text-link submit-enquiry" type="submit"><span class="arrow-tile"><svg><use href="#arrow"/></svg></span>Prepare my enquiry</button></form><div id="enquiry-result" class="enquiry-draft"><svg class="result-leaf"><use href="#leaf"/></svg><h3 id="draft-heading">Your email draft</h3><p id="draft-status" role="status">Prepare your enquiry above, then open the email draft to review and send.</p><a class="text-link" id="email-draft" aria-disabled="true"><span class="arrow-tile"><svg><use href="#arrow"/></svg></span>Open email draft</a><details><summary>View your message</summary><pre id="draft-preview"></pre></details></div></dialog>
+  <script type="module" src="site.js"></script>
+</body>
+</html>
