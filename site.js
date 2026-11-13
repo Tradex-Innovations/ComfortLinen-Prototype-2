@@ -16,6 +16,7 @@ if (heroPreview) {
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const hero = $('#home');
 const heroVideo = $('#hero-video');
+const heroTitle = $('#hero-title');
 const playbackButton = $('#hero-playback');
 const fullFilm = $('#full-film');
 const filmDialog = $('#film-dialog');
@@ -31,6 +32,24 @@ for (const video of [heroVideo, fullFilm]) {
     video.load();
   }
 }
+
+// The supplied film introduces its own closing title at about 62 seconds.
+// Follow media time so pauses, seeking and loops keep the website title in sync.
+function syncHeroTitle(time = heroVideo.currentTime) {
+  const fade = Math.min(1, Math.max(0, (time - 60.5) / .75));
+  heroTitle.style.opacity = String(reducedMotion.matches ? Number(fade < 1) : 1 - fade);
+}
+['loadeddata', 'timeupdate', 'seeking', 'seeked', 'emptied'].forEach(event => {
+  heroVideo.addEventListener(event, () => syncHeroTitle());
+});
+if ('requestVideoFrameCallback' in heroVideo) {
+  const followHeroFrames = (_now, frame) => {
+    syncHeroTitle(frame.mediaTime);
+    heroVideo.requestVideoFrameCallback(followHeroFrames);
+  };
+  heroVideo.requestVideoFrameCallback(followHeroFrames);
+}
+syncHeroTitle();
 
 $$('[data-year]').forEach(el => { el.textContent = new Date().getFullYear(); });
 
